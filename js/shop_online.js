@@ -6,7 +6,6 @@ if (document.readyState == 'loading') {
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItemButtons)
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
@@ -36,7 +35,8 @@ function purchaseClicked() {
 
 
 
-function removeCartItem(event) {var buttonClicked = event.target
+function removeCartItem(event) {
+    var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
@@ -48,17 +48,6 @@ function quantityChanged(event) {
         input.value = 1
     } 
     updateCartTotal()
-}
-
-var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-console.log(removeCartItemButtons)
-for (var i = 0; i < removeCartItemButtons.length; i++) {
-    var button = removeCartItemButtons[i]
-    button.addEventListener('click', function(event) {
-       var buttonClicked = event.target
-       buttonClicked.parentElement.parentElement.remove()
-       updateCartTotal()
-    })
 }
 
 function updateCartTotal() {
@@ -117,6 +106,20 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
+
+
+
+
+/*var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+console.log(removeCartItemButtons)
+for (var i = 0; i < removeCartItemButtons.length; i++) {
+    var button = removeCartItemButtons[i]
+    button.addEventListener('click', function(event) {
+       var buttonClicked = event.target
+       buttonClicked.parentElement.parentElement.remove()
+       updateCartTotal()
+    })
+} */
 
 
 
