@@ -7,10 +7,10 @@ var i = 0;
 var time = 3000;
 var images = [];
 
-            images[0] = '/images/gs1.jpg';
-            images[1] = '/images/gs2.jpg';
-            images[2] = '/images/gs3.jpg';
-            images[3] = '/images/gs4.jpg';
+            images[0] = './images/gs1.jpg';
+            images[1] = './images/gs2.jpg';
+            images[2] = './images/gs3.jpg';
+            images[3] = './images/gs4.jpg';
 
 
     function changeImg(){
